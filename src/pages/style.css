@@ -1,0 +1,166 @@
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+.dark-mode {
+  background-color: #121212;  
+  color: white;                
+}
+
+
+.light-mode {
+  background-color: white;    
+  color: black;               
+}
+
+
+.dark-mode .header {
+  background-color: #333; 
+  color: white;           
+}
+
+
+.dark-mode .footer {
+  background-color: #222;
+  color: white;
+}
+
+
+.light-mode .header {
+  background-color: #f0f0f0;  
+  color: black;                
+}
+
+
+.header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+    height: 60px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100%; 
+  }
+  .logo {
+    color: #B288C0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #B288C0;
+  }
+  .main-content {
+    padding: 40px;
+  }
+  .footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    height: 40px;
+  }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-toggle {
+  padding: 8px 16px;
+  background-color: #B288C0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #B288C0;
+}
+
+
+.info-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
