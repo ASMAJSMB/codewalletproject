@@ -7,7 +7,7 @@ const Header = () => {
   const { darkMode, toggleDarkMode } = useDarkMode(); 
 
   return (
-    <header className="header">
+    <header className={`header ${darkMode ? "dark-mode" : ""}`}>
       <div className="container">
         <Link to="/fragments" className="logo">
           <h1>Code Wallet</h1>
@@ -17,7 +17,6 @@ const Header = () => {
           <Link to="/tags">Tags</Link>
           <Link to="/info">Info</Link>
         </nav>
-        
         <button className="mode-toggle" onClick={toggleDarkMode}>
           {darkMode ? "Mode Clair" : "Mode Sombre"}
         </button>
