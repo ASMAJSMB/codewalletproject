@@ -1,5 +1,5 @@
 import React from 'react';
-
+// modal
 const Modal = ({ children }) => {
   return (
     <div className="modal-overlay">

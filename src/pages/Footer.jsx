@@ -1,7 +1,7 @@
 import React from "react";
 import { useDarkMode } from "../components/DarkModeContext"; 
 import "./style.css";
-
+// le footer 
 const Footer = () => {
   const { darkMode } = useDarkMode();
 

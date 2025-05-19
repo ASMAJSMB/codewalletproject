@@ -11,11 +11,11 @@ function createWindow() {
     }
   });
 
-  // ⚠️ attention à bien pointer vers le bon fichier
   win.loadFile(path.join(__dirname, 'dist', 'index.html'));
 
-  win.webContents.openDevTools(); // pour voir les erreurs si l’écran est blanc
+  win.webContents.openDevTools(); 
 }
+
 
 app.whenReady().then(createWindow);
 

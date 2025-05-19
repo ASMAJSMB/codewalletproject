@@ -3,15 +3,19 @@ import { db } from '../firebase.js';
 import { collection, addDoc, getDoc, doc, updateDoc, getDocs, deleteDoc } from "firebase/firestore";
 import { useParams, useNavigate } from 'react-router-dom';
 import "./styl.css";
-// voici la page du formulaire 
+
+// voici la page du formulaire
 const FormulaireFragment = () => {
-  const { id } = useParams(); 
-  const navigate = useNavigate(); 
+  const { id } = useParams(); // on récupère l'id du fragment depuis l'URL
+  const navigate = useNavigate(); // pour rediriger après enregistrement ou suppression
+
+
+  // les valeurs du formulaire
   const [title, setTitle] = useState('');
   const [code, setCode] = useState('');
   const [tags, setTags] = useState('');
 
-  
+  // si on modifie un fragment, on vas chercher ses données
   useEffect(() => {
     const fetchFragment = async () => {
       if (id) {
@@ -22,7 +26,7 @@ const FormulaireFragment = () => {
           const data = fragmentSnap.data();
           setTitle(data.title);
           setCode(data.code);
-          setTags(data.tags.join(', ')); 
+          setTags(data.tags.join(', ')); // on remet les tags sous forme de texte
         } else {
           console.log("Fragment introuvable.");
         }
@@ -32,16 +36,20 @@ const FormulaireFragment = () => {
     fetchFragment();
   }, [id]);
 
+  // fonction qui s'exécute quand on clique sur enregistrer
   const handleSave = async (e) => {
     e.preventDefault();
 
+    // on transforme les tags en tableau
     const tagList = tags.split(',').map(tag => tag.trim()).filter(tag => tag !== "");
 
     try {
+      // on récupère tous les tags déjà existants
       const tagsCollectionRef = collection(db, "tags");
       const tagDocsSnapshot = await getDocs(tagsCollectionRef);
       const existingTags = tagDocsSnapshot.docs.map(doc => doc.data().name);
 
+      // on ajoute les nouveaux tags qui n'existent pas encore
       for (let tag of tagList) {
         if (!existingTags.includes(tag)) {
           await addDoc(tagsCollectionRef, { name: tag });
@@ -49,31 +57,29 @@ const FormulaireFragment = () => {
       }
 
       if (id) {
-        
+        // si id existe, on modifie un fragment existant
         const fragmentRef = doc(db, "fragments", id);
         await updateDoc(fragmentRef, {
           title,
           code,
           tags: tagList,
         });
-        console.log('Fragment mis à jour avec succès');
         alert('Fragment modifié avec succès !');
       } else {
-        
+        // sinon, on crée un nouveau fragment
         const fragmentsCollectionRef = collection(db, "fragments");
         await addDoc(fragmentsCollectionRef, {
           title,
           code,
           tags: tagList,
         });
-        console.log('Fragment ajouté avec succès');
         alert('Fragment enregistré avec succès !');
       }
 
-      
+      // on redirige vers la liste des fragments
       navigate('/fragments');
 
-      
+      // on vide le formulaire
       setTitle('');
       setCode('');
       setTags('');
@@ -84,6 +90,7 @@ const FormulaireFragment = () => {
     }
   };
 
+  // fonction pour supprimer un fragment
   const handleDelete = async (e) => {
     e.preventDefault();
     const confirmDelete = window.confirm("Es-tu sûr(e) de vouloir supprimer ce fragment ?");
@@ -92,7 +99,7 @@ const FormulaireFragment = () => {
         const fragmentRef = doc(db, "fragments", id);
         await deleteDoc(fragmentRef);
         alert("Fragment supprimé avec succès !");
-        navigate('/fragments'); 
+        navigate('/fragments'); // retour à la liste
       } catch (error) {
         console.error("Erreur lors de la suppression :", error);
         alert("Erreur lors de la suppression.");
@@ -100,6 +107,7 @@ const FormulaireFragment = () => {
     }
   };
 
+  // le formulaire
   return (
     <div className="form-container">
       <h1>{id ? "Modifier Fragment" : "Nouveau Fragment"}</h1>

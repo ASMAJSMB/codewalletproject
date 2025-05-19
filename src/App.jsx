@@ -11,7 +11,9 @@ import { DarkModeProvider } from './components/DarkModeContext.jsx';
 function App() {
   return (
     <DarkModeProvider>
+      {/* pour mettre le mode sombre  */}
       <Router>
+        {/* pour la redirection des pages  */}
         <div className="page-container">
           <Header />
           <main className="main-content">

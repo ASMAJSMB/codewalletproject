@@ -23,9 +23,7 @@ const Info = () => {
         <h2>Développeurs</h2>
         <p>L'application a été développée par une équipe de passionnés de technologie et de développement web.</p>
         <ul>
-          <li><strong>Développeuse Frontend :</strong> Asma Haddad - Spécialisée en React et JavaScript.</li>
-          <li><strong>Développeur Backend :</strong> Mohamed Amine Haddad - Spécialisé en Firebase et gestion des bases de données.</li>
-          <li><strong>Concepteur UI/UX :</strong> Alice Dupont - Chargée de la conception et de l'ergonomie de l'application.</li>
+          <li><strong>Développeuse Frontend :</strong> Asma Haddad - Developpeuse fullstack .</li> 
         </ul>
       </section>
 
