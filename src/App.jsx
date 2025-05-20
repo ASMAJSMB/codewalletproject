@@ -8,6 +8,7 @@ import Info from "./pages/info.jsx";
 import FormulaireFragment from "./components/FormulaireFragment.jsx";
 import { DarkModeProvider } from './components/DarkModeContext.jsx';
 
+
 function App() {
   return (
     <DarkModeProvider>
