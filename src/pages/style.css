@@ -144,6 +144,7 @@ html, body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
+  color: #9A48D0;
 }
 
 .info-section {
@@ -153,7 +154,7 @@ html, body {
 .info-section h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #B288C0;
 }
 
 .info-section ul {
@@ -165,7 +166,9 @@ html, body {
   margin-bottom: 10px;
   line-height: 1.6;
 }
-
+.info-section p {
+color: #7BC950;
+}
 strong {
   font-weight: bold;
 }

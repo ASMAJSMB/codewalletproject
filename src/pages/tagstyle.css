@@ -36,6 +36,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  color: #121212;
 }
 
 .tag {
@@ -73,6 +74,7 @@ body {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #9A48D0;
 }
 
 .modal-input {

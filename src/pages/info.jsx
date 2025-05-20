@@ -21,7 +21,6 @@ const Info = () => {
       
       <section className="info-section">
         <h2>Développeurs</h2>
-        <p>L'application a été développée par une équipe de passionnés de technologie et de développement web.</p>
         <ul>
           <li><strong>Développeuse Frontend :</strong> Asma Haddad - Developpeuse fullstack .</li> 
         </ul>
