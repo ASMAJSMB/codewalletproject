@@ -110,7 +110,7 @@ const FormulaireFragment = () => {
   // le formulaire
   return (
     <div className="form-container">
-      <h1>{id ? "Modifier Fragment" : "Nouveau Fragment"}</h1>
+      <h1>{id ? "update fragment" : "new fragmennt"}</h1>
       <form onSubmit={handleSave}>
         <div>
           <label htmlFor="title">Title</label>
@@ -137,12 +137,12 @@ const FormulaireFragment = () => {
             id="tags"
             value={tags}
             onChange={(e) => setTags(e.target.value)}
-            placeholder="Séparez les tags par des virgules"
+            placeholder="Separate the tags with commas"
           />
         </div>
 
         <div className="buttons">
-          <button type="submit">{id ? "Mettre à jour" : "Enregistrer"}</button>
+          <button type="submit">{id ? "to update" : "Save"}</button>
           <button onClick={handleDelete} type="button" className="delete-button">Delete</button>
         </div>
       </form>

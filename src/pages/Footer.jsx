@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className={`footer ${darkMode ? "dark-mode" : ""}`}>
-      <p className="footer-text">© 2025 Code Wallet. Tous droits réservés.</p>
+      <p className="footer-text">© 2025 Code Wallet. All rights reserved.</p>
     </footer>
   );
 };

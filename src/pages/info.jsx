@@ -5,35 +5,35 @@ import './style.css';
 const Info = () => {
   return (
     <div className="info-container">
-      <h1 className="page-title">Informations sur l'Application</h1>
+      <h1 className="page-title">Information about the Application</h1>
 
      
       <section className="info-section">
-        <h2>Fonctionnalités de l'application</h2>
+        <h2>Application features</h2>
         <ul>
-          <li><strong>Gestion des Tags :</strong> Ajoutez, modifiez et supprimez des tags facilement.</li>
-          <li><strong>Authentification sécurisée :</strong> Connexion et gestion des comptes utilisateurs avec des options de sécurité avancées.</li>
-          <li><strong>Interface responsive :</strong> L'application s'adapte à tous les types d'écrans, que ce soit sur desktop, tablette ou mobile.</li>
-          <li><strong>Stockage Cloud :</strong> Toutes les données sont stockées dans Firebase pour une gestion sécurisée et fiable.</li>
+          <li><strong>Tag Management:</strong> Easily add, modify, and delete tags.</li>
+          <li><strong>Secure authentication:</strong> Connection and management of user accounts with advanced security options.</li>
+          <li><strong>Responsive interface:</strong> The application adapts to all types of screens, whether on desktop, tablet, or mobile.</li>
+          <li><strong>Cloud Storage :</strong>All data is stored in Firebase for secure and reliable management.</li>
         </ul>
       </section>
 
       
       <section className="info-section">
-        <h2>Développeurs</h2>
+        <h2>Développers</h2>
         <ul>
-          <li><strong>Développeuse Frontend :</strong> Asma Haddad - Developpeuse fullstack .</li> 
+          <li><strong> Developer:</strong> Asma Haddad - Developpeuse fullstack .</li> 
         </ul>
       </section>
 
      
       <section className="info-section">
-        <h2>Cadre Légal et Gestion des Données</h2>
+        <h2>Legal Framework and Data Management</h2>
         <p>
-          Cette application respecte les lois en vigueur concernant la protection des données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD) de l'Union Européenne. Les informations collectées par l'application sont exclusivement utilisées pour le fonctionnement interne et la gestion des utilisateurs. Aucune donnée personnelle n'est partagée avec des tiers sans consentement préalable.
+         This application complies with the laws in force regarding the protection of personal data, in accordance with the General Data Protection Regulation (GDPR) of the European Union. The information collected by the application is used exclusively for internal operation and user management. No personal data is shared with third parties without prior consent.
         </p>
         <p>
-          Pour plus d'informations sur notre politique de confidentialité et les conditions d'utilisation, veuillez consulter les sections appropriées dans les paramètres de l'application.
+          For more information on our privacy policy and terms of use, please refer to the appropriate sections in the app's settings.
         </p>
       </section>
     </div>

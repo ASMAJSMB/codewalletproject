@@ -18,7 +18,7 @@ const Header = () => {
           <Link to="/info">Info</Link>
         </nav>
         <button className="mode-toggle" onClick={toggleDarkMode}>
-          {darkMode ? "Mode Clair" : "Mode Sombre"}
+          {darkMode ? "light mode" : "dark mode"}
         </button>
       </div>
     </header>
