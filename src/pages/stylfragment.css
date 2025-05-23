@@ -110,3 +110,45 @@ body {
   justify-content: flex-end; 
   margin-bottom: 20px; 
 }
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+  .fragments-list {
+    flex-direction: column; /* reste en colonne */
+  }
+  
+  .fragment-card {
+    width: 100%;      /* bien prendre toute la largeur du conteneur */
+    max-width: 100%;  /* éviter les débordements */
+  }
+  
+  .code-container {
+    padding: 15px;    /* un peu moins de padding pour plus de place */
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .fragments-list {
+    flex-direction: column;
+  }
+  
+  .fragment-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;  /* réduire padding pour mobile */
+  }
+  
+  .code-container {
+    padding: 10px;  /* réduire padding dans le bloc code */
+  }
+  
+  .copy-button {
+    padding: 4px 8px; /* bouton un peu plus petit */
+    font-size: 12px;
+  }
+  
+  .new-fragment-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

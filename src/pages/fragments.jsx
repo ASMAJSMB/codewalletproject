@@ -60,7 +60,7 @@ const FragmentsPage = () => {
   };
 
   return (
-    <div className="fragments-page">
+    <div className="fragments-page ">
       <h1 className='fr'>Fragments</h1>
 
       {/* Bouton pour créer un nouveau fragment */}

@@ -1,7 +1,7 @@
-
 body {
   font-family: Montserrat, sans-serif;
 }
+
 .dark-mode {
   background-color: #121212; 
   color: white;                
@@ -13,99 +13,205 @@ body {
   color: black;                
 }
 
-
 .dark-mode .header {
   background-color: #333; 
   color: white;            
 }
-
 
 .dark-mode .footer {
   background-color: #222;
   color: white;
 }
 
-
 .light-mode .header {
   background-color: #f0f0f0;  
   color: black;                
 }
 
-
 .fragment-card {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 16px;
-    margin: 12px;
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px auto;
+  width: 300px;
+  max-width: 90vw;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.fragment-card:hover {
+  transform: scale(1.02);
+}
+
+.fragment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fragment-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+.fragment-description {
+  margin: 10px 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.fragment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #333;
+}
+
+.eye-icon {
+  cursor: pointer;
+  color: #444;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal pre {
+  background: #f9f9f9;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: pre-wrap; /* pour éviter l'horizontal scroll */
+  word-wrap: break-word;
+}
+
+.logo {
+  color: #9A48D0;
+}
+
+/* Styles généraux */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Styles pour les boutons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+/* Media query pour tablettes (écrans moyens) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+    font-size: 14px;
   }
-  
-  .fragment-card:hover {
-    transform: scale(1.02);
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  
-  .fragment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .fragment-card {
+    width: 90%;
+    padding: 14px;
   }
-  
+
+  .fragment-header h3 {
+    font-size: 1.1rem;
+  }
+
   .fragment-description {
-    margin: 10px 0;
-    color: #555;
+    font-size: 0.9rem;
   }
-  
-  .fragment-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  
-  .tag {
-    background: #f0f0f0;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    color: #333;
-  }
-  
-  .eye-icon {
-    cursor: pointer;
-    color: #444;
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+}
+
+/* Media query pour mobiles (petits écrans) */
+@media (max-width: 480px) {
+  .container {
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    font-size: 12px;
   }
-  
-  .modal {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 500px;
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
   }
-  
-  .modal pre {
-    background: #f9f9f9;
+
+  .fragment-card {
+    width: 100%;
     padding: 12px;
-    overflow-x: auto;
-    border-radius: 8px;
+    margin: 10px 0;
   }
-  
- .logo{
-  color : 9A48D0;
- }
- 
+
+  .fragment-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eye-icon {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .fragment-header h3 {
+    font-size: 1rem;
+  }
+
+  .fragment-description {
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}

@@ -1,12 +1,39 @@
-# React + Vite
+# Mon Projet React - Gestion de Fragments et Mode Sombre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet React permet de gérer une liste de fragments avec les fonctionnalités de création, modification, suppression, ainsi qu’un mode clair/sombre basculable.
+et gérer aussi les tags
 
-Currently, two official plugins are available:
+## Fonctionnalités principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Création, modification et suppression de fragments
+- Création, modification et suppression de tags
+- Changement dynamique entre mode clair et mode sombre
+- Interface simple et responsive
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tests
+
+### Plan de tests
+
+Le plan de tests couvre les fonctionnalités suivantes :
+
+- Création d’un fargment 
+- Modification d’un fargment 
+- Suppression d’un fargment 
+- Création d’un tag
+- Modification d’un tag
+- Suppression d’un tag
+- Basculer entre mode clair et mode sombre
+
+### Environnement de tests
+
+Les tests sont écrits avec Jest et React Testing Library.  
+Ils sont automatisés pour garantir que les fonctionnalités fonctionnent comme attendu.
+
+### Lancement des tests
+
+Pour exécuter les tests, utiliser la commande :
+
+```bash
+npm test
