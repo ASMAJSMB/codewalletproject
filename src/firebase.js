@@ -1,9 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore"; 
+import { getAnalytics, isSupported } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 
-
-// configration de firebase 
+// config firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBUKhLOcbSm-jafCbPE5e3UtlcguSCkEKM",
   authDomain: "fir-app-67864.firebaseapp.com",
@@ -14,11 +13,19 @@ const firebaseConfig = {
   measurementId: "G-KSHE3DYQ7P"
 };
 
-
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+let analytics;
+if (process.env.NODE_ENV !== "test") {
+  // On initialise analytics seulement si on est PAS dans un test
+  isSupported().then(supported => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
 
 const db = getFirestore(app);
 
-export { db }; 
+export { db };
 export default app;
