@@ -9,7 +9,9 @@
     "test": "jest",
     "build": "vite build",
     "preview": "vite preview",
-    "start:electron": "npm run build && electron ."
+    "start:electron": "npm run build && electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "npm run build && electron-builder"
   },
   "dependencies": {
     "firebase": "^11.8.1",
@@ -48,15 +50,28 @@
     "wait-on": "^8.0.3"
   },
   "build": {
-    "appId": "com.codewallet.app",
-    "files": [
-      "dist",
-      "electron"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    }
+  "appId": "com.codewallet.app",
+  "productName": "Code Wallet",               
+  "files": [
+    "dist/**/*",         
+    "main.cjs",          
+    "electron/**/*"      
+  ],
+  "directories": {
+    "buildResources": "assets"
   },
+  "win": {
+    "target": "nsis",           
+    "icon": "assets/icon.ico"   
+  },
+  "nsis": {
+    "oneClick": false,          
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Code Wallet"
+  }
+},
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
     "setupFilesAfterEnv": [
